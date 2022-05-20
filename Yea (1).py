@@ -26,7 +26,7 @@ class YeaMod(loader.Module):
  🟩@🟩@🟩@
 ㅤㅤㅤ  🟫
 ㅤㅤㅤ  🟫ㅤㅤㅤ  
-  Happy new year!
+  С новым годом!
 '''
          yeaall = ''
          for i in yea:
