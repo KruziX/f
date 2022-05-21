@@ -9,7 +9,7 @@ import sys
 import random
 
 @loader.tds
-class Tetris Animation(loader.Module):
+class TetrisAnimation(loader.Module):
     """При использовании команды, Вы получите красивую анимацию тетриса, которая соберёт вам хорошую фигуру"""
 
 
