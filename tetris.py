@@ -6,7 +6,6 @@ from telethon.tl.types import Message
 import asyncio
 import os
 import sys
-import random
 
 @loader.tds
 class TetrisAnimation(loader.Module):
