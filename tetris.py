@@ -9,7 +9,7 @@ import sys
 
 @loader.tds
 class TetrisAnimation(loader.Module):
-    """При использовании команды, Вы получите красивую анимацию тетриса, которая соберёт вам хорошую фигуру"""
+	strings = {"name": "Tetris Animation"}
 
 
 @borg.on(events.NewMessage(pattern=r"\.tetris", outgoing=True))
