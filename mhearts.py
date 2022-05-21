@@ -1,7 +1,12 @@
 from telethon import events
+from .. import loader, utils
 import asyncio
 import os
 import sys
+
+@loader.tds
+class TetrisAnimation(loader.Module):
+	strings = {"name": "Too Much Hearts"}
 
 
 @borg.on(events.NewMessage(pattern=r"\.mhearts", outgoing=True))
