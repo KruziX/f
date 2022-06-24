@@ -5,7 +5,7 @@ from time import sleep
 from userbot.events import register
 
 
-@register(outgoing=True, pattern='^.fl(?: |$)(.*)')
+@register(outgoing=True, pattern='^.mess(?: |$)(.*)')
 async def typewriter(typew):
     await typew.edit("`⏰ Сообщение загружается..`")
     sleep(1)
