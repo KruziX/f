@@ -4,16 +4,16 @@ from .. import loader, utils
  
 @loader.tds 
 class ModulesLinkMod(loader.Module): 
-    """Ссылка на модуль""" 
-    strings = {'name': 'ModulesLink'} 
+    """🔗 Ссылка на модуль""" 
+    strings = {'name': 'ModuleLinkRemasteredBy@KruzProjects'} 
  
     async def mlcmd(self, message): 
-        """Вывести ссылку на модуль""" 
+        """🔗 Вывести ссылку на модуль""" 
         args = utils.get_args_raw(message) 
         if not args: 
-            return await message.edit('Нет аргументов.') 
+            return await message.edit('🚫 Нет аргументов') 
  
-        await message.edit('Ищем...') 
+        await message.edit('🔎 Ищем..') 
  
         try: 
             f = ' '.join([x.strings["name"] for x in self.allmodules.modules if args.lower() == x.strings["name"].lower()]) 
@@ -21,9 +21,9 @@ class ModulesLinkMod(loader.Module):
  
             link = str(r).split('(')[1].split(')')[0] 
             if "http" not in link: 
-                text = f"Модуль {f}:" 
+                text = f"💻 Модуль {f}:" 
             else: 
-                text = f"<a href=\"{link}\">Ссылка</a> на 🇺🇦{f}: <code>{link}</code>" 
+                text = 🔗 f"<a href=\"{link}\">Ссылка</a> на {f}: <code>{link}</code>" 
  
             out = io.BytesIO(r.__loader__.data) 
             out.name = f + ".py" 
@@ -32,4 +32,4 @@ class ModulesLinkMod(loader.Module):
             await message.respond(text, file=out) 
             await message.delete() 
         except: 
-            return await message.edit("Попробуй ввести имя модуля в кавычках")
+            return await message.edit("😕 Ничего не найдено. Попробуйте ввести имя модуля в кавычках или посмотреть имя модуля ещё раз")
